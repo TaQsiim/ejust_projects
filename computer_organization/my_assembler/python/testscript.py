@@ -20,4 +20,5 @@ if __name__ == "__main__":
     with open(OUT_FILE, 'r') as f:
         print('TEST PASSED' if f.read() == bin_text else 'TEST FAILED')
         
-    print("Machine language:\n",bin_text)
+    print("Machine language:")
+    print(bin_text)
