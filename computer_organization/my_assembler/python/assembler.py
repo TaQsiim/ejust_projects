@@ -1,4 +1,3 @@
-#اي run mn "testscript.py" file
 class Assembler(object):
     def __init__(self, asmpath='', mripath='', rripath='', ioipath='') -> None:
         super().__init__()
@@ -20,27 +19,14 @@ class Assembler(object):
     def read_code(self, path:str):
         assert path.endswith('.asm') or path.endswith('.S'), \
                         'file provided does not end with .asm or .S'
-        self.__asmfile = path.split('/')[-1] #بيقسم  عند كل / وبياخد العنصر الاخير )اسم الملف()
+        self.__asmfile = path.split('/')[-1] 
         with open(path, 'r') as f:
             # remove '\n' from each line, convert it to lower case, and split
             # it by the whitespaces between the symbols in that line.
             self.__asm = [s.rstrip().lower().split() for s in f.readlines()]
-#s.rstrip() بيشيل space
-#make it in lower case
-#يقسم النص إلى قائمة من الكلمات
-#مثال لو هو
-#ORG 100 /starting location
-#CLE     / clear E
-#CLA
-#هيبقي 
-#self.__asm = [
-  #  ['org', '100', '/starting', 'location'],
-  #  ['cle', '/clear', 'e'],
-  #  ['cla']
-#]
+
 
     def assemble(self, inp='') -> dict:
- #check 3al last step
         assert self.__asm or inp, 'no assembly file provided'
         if inp:
             assert inp.endswith('.asm') or inp.endswith('.S'), \
@@ -59,32 +45,19 @@ class Assembler(object):
         with open(path, 'r') as f:
             t = [s.rstrip().lower().split() for s in f.readlines()]
         return {opcode:binary for opcode,binary in t}
-#بنستخدمها مع mri w rri w ioi files 
-#يعني لو كدا add 0001
-#sub 0010
-#mul 0011
-#هيكون كدا {'add': '0001', 'sub': '0010', 'mul': '0011'}
+
     def __islabel(self, string) -> bool:
         return string.endswith(',')
 
 
     def __rm_comments(self) -> None:
-        for i in range(len(self.__asm)): #هيعدي علي كل سطر
-            for j in range(len(self.__asm[i])): #هيعدي علي كل كلمه
+        for i in range(len(self.__asm)): 
+            for j in range(len(self.__asm[i])): 
                 if self.__asm[i][j].startswith('/'):
-                    del self.__asm[i][j:] #لو comment هيمسح كل الكلام الي بعدو
+                    del self.__asm[i][j:] 
                     break
 
-#لو كدا
- #ORG 100 /starting location
-#CLE     /clear accumulator
-#CLA
-#هيبقي كدا 
-#[
-   # ['org', '100'],
-    #['cle'],
-    #['cla']
-#]
+
 
 
     def __format2bin(self, num: str, numformat: str, format_bits: int) -> str:
@@ -100,7 +73,7 @@ class Assembler(object):
         if value < 0:
             value = (1 << format_bits) + value #2' complement
     
-    # chech el value sa7
+  
         if value < 0 or value >= (1 << format_bits):
             raise ValueError(f"Number {num} out of range for {format_bits} bits.")
     
@@ -110,53 +83,44 @@ class Assembler(object):
 
 
     def __first_pass(self) -> None:
-      #علشان امشي علي كل ال lines 
+     
         lc=0
-        for i in range(len(self.__asm)): #علشان يعدي علي كل سطر متخزن ف self.__asm
-            #لو طلع label 
-            if(self.__islabel(self.__asm[i][0])): #check awel word
-                self.__address_symbol_table[self.__asm[i][0][0:3]]=self.__format2bin(str(lc),'dec',12) #علشان يعدي علي حرف حرف و asm biggest list i , 0for child  child of child w 12 3l4an el address 12 bit 
-                lc+=1  # استخراج (بدون الفاصلة) [0:3] (زي: ROT, → ROT).
+        for i in range(len(self.__asm)): 
+         
+            if(self.__islabel(self.__asm[i][0])): 
+                self.__address_symbol_table[self.__asm[i][0][0:3]]=self.__format2bin(str(lc),'dec',12) 
+                lc+=1  
             elif self.__asm[i][0]=="org":
-                lc=int(self.__asm[i][1],16) # UPDATE EL LC BL elrakam el ganb el org / 16 3l4an y'5aleeh binary
+                lc=int(self.__asm[i][1],16)
             elif self.__asm[i][0]=="end":
                 print("Symbol Table: \n",self.__address_symbol_table)
                 return
-            #Skip by increment
+        
             else:
                lc+=1 
                 
-#هتشيك اني صح ب print(self.__address_symbol_table) بعد end case 
-     
-#بعد ده المفروض
-#ORG 100
-#ROT, CIL /start rotating AC
-#AGN, CLE
-#STA CTR
-#END
-#يبقي
-#Symbol Table:{'rot': '000100000000', 'agn': '000100000001'}
+
 
     #INSTRUCTION TO BIN
     def __second_pass(self) -> None:
         lc=0
-        for i in range(len(self.__asm)): #check the 4 sudoinsctruction (org , dec  hex . end)
+        for i in range(len(self.__asm)): 
             if (self.__asm[i][0]=='org'):
-                lc=int(self.__asm[i][1],16) #set lc = org , 1 for 100
+                lc=int(self.__asm[i][1],16) 
             elif (self.__asm[i][0]=='end'):
                 return
-            elif len(self.__asm[i])>2 and (self.__asm[i][1]=='dec'):#check > 2 ? 3l4an hex lazem ba3do instruction w ablo label so 2 is min len
-                self.__bin[self.__format2bin(str(lc),'dec',12)]= self.__format2bin(str(self.__asm[i][2]),'dec',16) #dec to binary and store IN BINit
+            elif len(self.__asm[i])>2 and (self.__asm[i][1]=='dec'):
+                self.__bin[self.__format2bin(str(lc),'dec',12)]= self.__format2bin(str(self.__asm[i][2]),'dec',16) 
                 lc+=1
                          
             elif len(self.__asm[i])>2 and (self.__asm[i][1]=='hex'):
                 self.__bin[self.__format2bin(str(lc),'dec',12)]= self.__format2bin(str(self.__asm[i][2]),'hex',16)
                 lc+=1
-                #بيشوف لو اول INDEX LABEL فياخد تاني واحد IF NOT هياخد الاول
+              
             instruction=self.__asm[i][1] if self.__islabel(self.__asm[i][0]) else self.__asm[i][0]
             bit_15 ='0' #direct
             
-            if instruction in self.__mri_table.keys():# 'cil': '0111', ال للجزء KEY الي علي الشمال
+            if instruction in self.__mri_table.keys():
                 address=str(self.__address_symbol_table[self.__asm[i][1]])
                 opcode= str(self.__mri_table[instruction])
                 self.__bin[self.__format2bin(str(lc),'dec',12)]= bit_15 + opcode + address
