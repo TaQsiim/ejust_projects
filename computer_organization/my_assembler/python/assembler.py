@@ -85,6 +85,7 @@ class Assembler(object):
     def __first_pass(self) -> None:
      
         lc=0
+        symbol_table = ''
         for i in range(len(self.__asm)): 
          
             if(self.__islabel(self.__asm[i][0])): 
@@ -93,7 +94,11 @@ class Assembler(object):
             elif self.__asm[i][0]=="org":
                 lc=int(self.__asm[i][1],16)
             elif self.__asm[i][0]=="end":
-                print("Symbol Table: \n",self.__address_symbol_table)
+                for symbol in self.__address_symbol_table:
+                    symbol_table += symbol + '\t' + self.__address_symbol_table[symbol] + '\n'
+                print("Symbol Table:")
+                print(symbol_table)
+                #print("Symbol Table: \n",self.__address_symbol_table)
                 return
         
             else:
@@ -118,7 +123,7 @@ class Assembler(object):
                 lc+=1
               
             instruction=self.__asm[i][1] if self.__islabel(self.__asm[i][0]) else self.__asm[i][0]
-            bit_15 ='0' #direct
+            bit_15 ='0' 
             
             if instruction in self.__mri_table.keys():
                 address=str(self.__address_symbol_table[self.__asm[i][1]])
