@@ -1,0 +1,25 @@
+# CMake generation dependency list for this directory.
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/CMakeLists.txt
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/build/CMakeFiles/3.28.3-msvc11/CMakeCCompiler.cmake
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/build/CMakeFiles/3.28.3-msvc11/CMakeCXXCompiler.cmake
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/build/CMakeFiles/3.28.3-msvc11/CMakeRCCompiler.cmake
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/build/CMakeFiles/3.28.3-msvc11/CMakeSystem.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeRCInformation.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Compiler/MSVC-C.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Compiler/MSVC-CXX.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Compiler/MSVC.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC-C.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC-CXX.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/Windows-MSVC.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/Windows.cmake
+G:/programming/vs community/VS IDE/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake

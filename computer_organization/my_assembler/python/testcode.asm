@@ -1,11 +1,11 @@
         ORG  100
-        LDA SUB
+        LDA SUB  /meow
         CMA
         INC
-        ADD MIN
+        ADD MIN I
         STA DIF
         HLT
 MIN,    DEC 83
-SUB,    DEC -23
+SUB,    DEC -23 
 DIF,    HEX 0
 END

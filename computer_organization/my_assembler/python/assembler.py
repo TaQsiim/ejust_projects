@@ -102,7 +102,7 @@ class Assembler(object):
                 return
         
             else:
-               lc+=1 
+               lc+=1   
                 
 
 

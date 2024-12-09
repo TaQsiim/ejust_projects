@@ -1,0 +1,3 @@
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/cmake-build-debug/CMakeFiles/CPP.dir
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/study/computer orgnization/lab/assembly/my assembler/CPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir

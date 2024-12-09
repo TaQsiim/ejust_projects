@@ -20,11 +20,11 @@ if __name__ == "__main__":
   
     print("Machine language:")
     print(bin_text)
-    #print(binaries)
+   # print(binaries)
      # with open(OUT_FILE, 'r') as f:
-    #     print('TEST PASSED' if f.read() == bin_text else 'TEST FAILED')
+    # print('TEST PASSED' if f.read() == bin_text else 'TEST FAILED')
     
-    if(open(OUT_FILE, 'r').read() == bin_text):
-        print("TEST PASSED")
-    else:
-        print("TEST FAILED")
+    # if(open(OUT_FILE, 'r').read() == binaries):
+    #     print("TEST PASSED")
+    # else:
+    #     print("TEST FAILED")

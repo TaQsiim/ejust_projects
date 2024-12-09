@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\study\computer orgnization\lab\assembly\my assembler\CPP\assembler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\study\computer orgnization\lab\assembly\my assembler\CPP\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{53AC9217-FC57-3CC5-A2B4-4C80853720BF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
