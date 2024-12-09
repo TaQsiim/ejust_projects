@@ -1,2 +1,2 @@
 # ejust_projects
-all my EJUST projects
+this is all the shit projects I did in uni 
